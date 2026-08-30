@@ -1,0 +1,667 @@
+
+/* ==================================================
+   SERVICIOS
+================================================== */
+
+.servicios-main {
+
+    position: absolute;
+
+    top: 76px;
+
+    bottom: 55px;
+
+    left: 0;
+
+    right: 0;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding: 90px 8% 100px;
+}
+
+
+/* ==================================================
+   SCROLL
+================================================== */
+
+.servicios-main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.servicios-main::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+.servicios-main::-webkit-scrollbar-thumb {
+
+    background: #292929;
+
+    border-radius: 10px;
+}
+
+.servicios-main::-webkit-scrollbar-thumb:hover {
+    background: #7c3aed;
+}
+
+
+/* ==================================================
+   ENCABEZADO
+================================================== */
+
+.servicios-header {
+
+    max-width: 900px;
+
+    margin-bottom: 80px;
+}
+
+
+.servicios-label {
+
+    color: #a855f7;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+
+.servicios-header h1 {
+
+    font-size: clamp(
+        55px,
+        8vw,
+        100px
+    );
+
+    line-height: 0.98;
+
+    font-weight: 600;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+}
+
+
+.servicios-header h1 span {
+
+    display: block;
+
+    color: #a855f7;
+}
+
+
+.servicios-intro {
+
+    max-width: 650px;
+
+    color: #7c3aed;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   CUADRÍCULA
+================================================== */
+
+.servicios-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   TARJETAS
+================================================== */
+
+.servicio-card {
+
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 40px;
+
+    background: #101010;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* TARJETA VISIBLE */
+
+.servicio-card.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* RETRASO DE ANIMACIÓN */
+
+.servicio-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.servicio-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.servicio-card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+
+/* ==================================================
+   EFECTO DE LUZ
+================================================== */
+
+.servicio-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    left: var(--mouse-x);
+
+    top: var(--mouse-y);
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 58, 237, 0.15),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+.servicio-card:hover::before {
+
+    opacity: 1;
+}
+
+
+.servicio-card:hover {
+
+    border-color:
+        rgba(124, 58, 237, 0.5);
+
+    background: #EDE9FE;
+}
+
+
+/* ==================================================
+   NÚMERO
+================================================== */
+
+.servicio-number {
+
+    position: absolute;
+
+    top: 28px;
+
+    right: 32px;
+
+    color: #333333;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.servicio-card:hover
+.servicio-number {
+
+    color: #a855f7;
+}
+
+
+/* ==================================================
+   ICONO
+================================================== */
+
+.servicio-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+    border: 1px solid
+        rgba(168, 85, 247, 0.35);
+
+    color: #a855f7;
+
+    font-size: 25px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.servicio-card:hover
+.servicio-icon {
+
+    background: #7c3aed;
+
+    color: #ffffff;
+
+    transform:
+        rotate(8deg);
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.servicio-card h2 {
+
+    max-width: 430px;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==================================================
+   DESCRIPCIÓN
+================================================== */
+
+.servicio-card p {
+
+    max-width: 500px;
+
+    color: #C4B5FD;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   LÍNEA
+================================================== */
+
+.servicio-line {
+
+    width: 40px;
+
+    height: 1px;
+
+    margin-top: 30px;
+
+    background: #7c3aed;
+
+    transition:
+        width 0.3s ease;
+}
+
+
+.servicio-card:hover
+.servicio-line {
+
+    width: 80px;
+}
+
+
+/* ==================================================
+   ETIQUETA
+================================================== */
+
+.servicio-tag {
+
+    display: block;
+
+    margin-top: 18px;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
+   SECCIÓN FINAL
+================================================== */
+
+.servicios-final {
+
+    max-width: 1200px;
+
+    margin: 130px auto 40px;
+
+    padding-top: 50px;
+
+    text-align: center;
+
+    border-top: 1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+
+.final-line {
+
+    width: 30px;
+
+    height: 2px;
+
+    margin: 0 auto 30px;
+
+    background: #7c3aed;
+}
+
+
+.servicios-final p {
+
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    color: #454141;
+
+    font-size: 24px;
+
+    line-height: 1.5;
+}
+
+
+.servicios-final p span {
+
+    color: #080808;
+
+    font-weight: 500;
+}
+
+
+/* ==================================================
+   BOTÓN
+================================================== */
+
+.servicios-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 24px;
+
+    background: #7c3aed;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.servicios-button span {
+
+    font-size: 17px;
+}
+
+
+.servicios-button:hover {
+
+    background: #6d28d9;
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .servicios-main {
+
+        padding-left: 6%;
+
+        padding-right: 6%;
+    }
+
+    .servicios-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 700px) {
+
+    .servicios-main {
+
+        top: 70px;
+
+        bottom: 55px;
+
+        padding:
+            65px 7% 80px;
+    }
+
+
+    .servicios-header {
+
+        margin-bottom: 55px;
+    }
+
+
+    .servicios-header h1 {
+
+        font-size: clamp(40px, 6vw, 75px);
+
+        letter-spacing: -2px;
+    }
+
+
+    .servicios-intro {
+
+        font-size: 15px;
+    }
+
+
+    .servicio-card {
+
+        min-height: auto;
+
+        padding: 30px;
+
+    }
+
+
+    .servicio-card h2 {
+
+        font-size: 24px;
+    }
+
+
+    .servicio-card p {
+
+        font-size: 14px;
+    }
+
+
+    .servicios-final {
+
+        margin-top: 80px;
+    }
+
+
+    .servicios-final p {
+
+        font-size: 20px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULARES PEQUEÑOS
+================================================== */
+
+@media (max-width: 400px) {
+
+    .servicios-header h1 {
+
+        font-size: 25px;
+    }
+
+
+    .servicio-card {
+
+        padding: 25px;
+    }
+
+
+    .servicio-icon {
+
+        width: 50px;
+
+        height: 50px;
+    }
+
+}
+
+/* ==================================================
+   IMÁGENES DE SERVICIOS
+================================================== */
+
+.servicio-image {
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-bottom: 30px;
+
+    opacity: 0.8;
+
+    filter: grayscale(30%);
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease,
+        filter 0.4s ease;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.servicio-card:hover .servicio-image {
+
+    transform: scale(1.03);
+
+    opacity: 1;
+
+    filter: grayscale(0%);
+}
+
+/* ==================================================
+   CAMBIO DE COLOR DEL TEXTO AL INTERACTUAR
+================================================== */
+
+.servicio-card:hover h2 {
+    color: #080808;
+}
+
+.servicio-card:hover p {
+    color: #080808;
+}
+
+.servicio-card:hover .servicio-tag {
+    color: #080808;
+}
