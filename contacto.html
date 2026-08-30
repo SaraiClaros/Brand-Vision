@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brand Vision | Contacto</title>
+
+
+    <!-- =================================
+         CSS GENERAL
+         Barra y footer
+    ================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- =================================
+         CSS EXCLUSIVO DE CONTACTO
+    ================================== -->
+
+    <link rel="stylesheet" href="css/contacto.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         BARRA DE NAVEGACIÓN
+    ================================== -->
+
+    <div id="barra"></div>
+
+
+
+    <!-- =================================
+         CONTENIDO DE CONTACTO
+    ================================== -->
+
+    <main class="contacto-main">
+
+
+        <!-- =================================
+             ENCABEZADO
+        ================================== -->
+
+        <section class="contacto-hero">
+
+            <div>
+
+                <p class="contacto-label">
+                    BRAND VISION / CONTACTO
+                </p>
+
+
+                <h1>
+                    Hagamos que tu marca
+                    <span>cobre vida.</span>
+                </h1>
+
+
+                <p class="contacto-intro">
+
+                    ¿Tienes una idea, un proyecto o simplemente
+                    quieres conocer más sobre lo que podemos
+                    hacer? Estamos listos para convertir tus
+                    ideas en experiencias interactivas.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             CONTACTO + REDES
+        ================================== -->
+
+        <section class="contacto-container">
+
+
+            <!-- =================================
+                 FORMULARIO
+            ================================== -->
+
+            <div class="contacto-form-wrapper">
+
+
+                <div class="form-header">
+
+                    <p>
+                        HABLEMOS
+                    </p>
+
+                    <h2>
+                        Cuéntanos sobre
+                        <span>tu proyecto.</span>
+                    </h2>
+
+                </div>
+
+
+                <form id="contactForm">
+
+
+                    <!-- NOMBRE -->
+
+                    <div class="form-group">
+
+                        <label for="nombre">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Tu nombre"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- CORREO -->
+
+                    <div class="form-group">
+
+                        <label for="correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="tucorreo@ejemplo.com"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- EMPRESA -->
+
+                    <div class="form-group">
+
+                        <label for="empresa">
+                            Empresa
+                            <span>(opcional)</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="empresa"
+                            name="empresa"
+                            placeholder="Nombre de tu empresa"
+                        >
+
+                    </div>
+
+
+
+                    <!-- TIPO DE PROYECTO -->
+
+                    <div class="form-group">
+
+                        <label for="proyecto">
+                            Tipo de proyecto
+                        </label>
+
+                        <select
+                            id="proyecto"
+                            name="proyecto"
+                            required
+                        >
+
+                            <option
+                                value=""
+                                disabled
+                                selected
+                            >
+                                Selecciona una opción
+                            </option>
+
+                            <option value="realidad-aumentada">
+                                Realidad aumentada
+                            </option>
+
+                            <option value="publicidad-interactiva">
+                                Publicidad interactiva
+                            </option>
+
+                            <option value="modelado-3d">
+                                Modelado y animación 3D
+                            </option>
+
+                            <option value="aplicacion">
+                                Aplicación o filtro
+                            </option>
+
+                            <option value="consultoria">
+                                Consultoría de publicidad
+                            </option>
+
+                            <option value="otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- MENSAJE -->
+
+                    <div class="form-group">
+
+                        <label for="mensaje">
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="5"
+                            placeholder="Cuéntanos un poco sobre tu idea..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- BOTÓN -->
+
+                    <button
+                        type="submit"
+                        class="contacto-submit"
+                    >
+
+                        Enviar mensaje
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- MENSAJE DE CONFIRMACIÓN -->
+
+                <div
+                    id="formMessage"
+                    class="form-message"
+                ></div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 REDES SOCIALES
+            ================================== -->
+
+            <aside class="contacto-social">
+
+
+                <div class="social-header">
+
+                    <p>
+                        CONECTA CON NOSOTROS
+                    </p>
+
+                    <h2>
+                        También puedes
+                        <span>encontrarnos aquí.</span>
+                    </h2>
+
+                </div>
+
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                    href="#"
+                    class="social-card"
+                    id="whatsapp"
+                >
+
+                    <div class="social-icon">
+                        ◉
+                    </div>
+
+
+                    <div class="social-info">
+
+                        <span class="social-name">
+                            WhatsApp
+                        </span>
+
+                        <span class="social-description">
+                            Escríbenos directamente
+                        </span>
+
+                    </div>
+
+
+                    <span class="social-arrow">
+                        ↗
+                    </span>
+
+                </a>
+
+
+
+                <!-- INSTAGRAM -->
+
+                <a
+                    href="#"
+                    class="social-card"
+                    id="instagram"
+                >
+
+                    <div class="social-icon">
+                        ◎
+                    </div>
+
+
+                    <div class="social-info">
+
+                        <span class="social-name">
+                            Instagram
+                        </span>
+
+                        <span class="social-description">
+                            Mira nuestros proyectos
+                        </span>
+
+                    </div>
+
+
+                    <span class="social-arrow">
+                        ↗
+                    </span>
+
+                </a>
+
+
+
+                <!-- FACEBOOK -->
+
+                <a
+                    href="#"
+                    class="social-card"
+                    id="facebook"
+                >
+
+                    <div class="social-icon">
+                        f
+                    </div>
+
+
+                    <div class="social-info">
+
+                        <span class="social-name">
+                            Facebook
+                        </span>
+
+                        <span class="social-description">
+                            Síguenos en nuestra página
+                        </span>
+
+                    </div>
+
+
+                    <span class="social-arrow">
+                        ↗
+                    </span>
+
+                </a>
+
+
+
+                <!-- CORREO -->
+
+                <a
+                    href="mailto:contacto@brandvision.com"
+                    class="social-card"
+                >
+
+                    <div class="social-icon">
+                        @
+                    </div>
+
+
+                    <div class="social-info">
+
+                        <span class="social-name">
+                            Correo electrónico
+                        </span>
+
+                        <span class="social-description">
+                            contacto@brandvision.com
+                        </span>
+
+                    </div>
+
+
+                    <span class="social-arrow">
+                        ↗
+                    </span>
+
+                </a>
+
+
+
+                <!-- FRASE -->
+
+                <div class="social-quote">
+
+                    <span></span>
+
+                    <p>
+                        Tu idea.
+                        Nuestra tecnología.
+                        <strong>
+                            Una nueva experiencia.
+                        </strong>
+                    </p>
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             FRASE FINAL
+        ================================== -->
+
+        <section class="contacto-final">
+
+            <div class="contacto-final-line"></div>
+
+            <p>
+                ¿Listo para hacer algo
+                <span>diferente?</span>
+            </p>
+
+            <h2>
+                Hablemos.
+            </h2>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <div id="footer"></div>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script>
+
+
+        /* =================================
+           CARGAR BARRA
+        ================================== */
+
+        fetch("./barra.html")
+
+            .then(response => {
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "No se pudo cargar barra.html"
+                    );
+
+                }
+
+                return response.text();
+
+            })
+
+            .then(data => {
+
+
+                document.getElementById(
+                    "barra"
+                ).innerHTML = data;
+
+
+                /*
+                   Marcar CONTACTO como activo
+                */
+
+                const enlaces =
+                    document.querySelectorAll(
+                        ".nav-links a"
+                    );
+
+
+                enlaces.forEach(enlace => {
+
+                    enlace.classList.remove(
+                        "active"
+                    );
+
+
+                    if (
+                        enlace.getAttribute("href")
+                        === "contacto.html"
+                    ) {
+
+                        enlace.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                });
+
+            })
+
+            .catch(error => {
+
+                console.error(
+                    "Error al cargar la barra:",
+                    error
+                );
+
+            });
+
+
+
+        /* =================================
+           CARGAR FOOTER
+        ================================== */
+
+        fetch("./footer.html")
+
+            .then(response => {
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "No se pudo cargar footer.html"
+                    );
+
+                }
+
+                return response.text();
+
+            })
+
+            .then(data => {
+
+                document.getElementById(
+                    "footer"
+                ).innerHTML = data;
+
+            })
+
+            .catch(error => {
+
+                console.error(
+                    "Error al cargar el footer:",
+                    error
+                );
+
+            });
+
+
+
+        /* =================================
+           ANIMACIONES AL HACER SCROLL
+        ================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            () => {
+
+
+                const elementos =
+                    document.querySelectorAll(
+                        ".contacto-form-wrapper, .contacto-social, .social-card, .contacto-final"
+                    );
+
+
+                const observer =
+                    new IntersectionObserver(
+                        (entries) => {
+
+
+                            entries.forEach(
+                                entry => {
+
+
+                                    if (
+                                        entry.isIntersecting
+                                    ) {
+
+                                        entry.target
+                                            .classList
+                                            .add(
+                                                "visible"
+                                            );
+
+
+                                        observer
+                                            .unobserve(
+                                                entry.target
+                                            );
+
+                                    }
+
+                                }
+                            );
+
+
+                        },
+                        {
+                            threshold: 0.12
+                        }
+                    );
+
+
+                elementos.forEach(
+                    elemento => {
+
+                        observer.observe(
+                            elemento
+                        );
+
+                    }
+                );
+
+
+            }
+        );
+
+
+
+        /* =================================
+           FORMULARIO
+        ================================== */
+
+        const contactForm =
+            document.getElementById(
+                "contactForm"
+            );
+
+
+        const formMessage =
+            document.getElementById(
+                "formMessage"
+            );
+
+
+        contactForm.addEventListener(
+            "submit",
+            function(event) {
+
+
+                event.preventDefault();
+
+
+                formMessage.textContent =
+                    "¡Gracias! Tu mensaje ha sido preparado correctamente.";
+
+
+                formMessage.classList.add(
+                    "show"
+                );
+
+
+                contactForm.reset();
+
+
+                setTimeout(
+                    () => {
+
+                        formMessage.classList.remove(
+                            "show"
+                        );
+
+                    },
+                    5000
+                );
+
+
+            }
+        );
+
+
+
+        /* =================================
+           ENLACES DE REDES
+        ================================== */
+
+        /*
+           Cuando tengas las redes reales,
+           solamente cambia estos enlaces.
+        */
+
+
+        document.getElementById(
+            "whatsapp"
+        ).href =
+            "#";
+
+
+        document.getElementById(
+            "instagram"
+        ).href =
+            "#";
+
+
+        document.getElementById(
+            "facebook"
+        ).href =
+            "#";
+
+
+    </script>
+
+
+</body>
+
+</html>

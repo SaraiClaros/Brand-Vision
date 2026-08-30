@@ -1,0 +1,1519 @@
+
+/* ==================================================
+   NOSOTROS
+   BRAND VISION
+================================================== */
+
+
+/* ==================================================
+   CONTENEDOR PRINCIPAL
+================================================== */
+
+.nosotros-main {
+
+    position: absolute;
+
+    top: 76px;
+
+    bottom: 55px;
+
+    left: 0;
+
+    right: 0;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding: 90px 8% 120px;
+
+}
+
+
+/* ==================================================
+   SCROLL
+================================================== */
+
+.nosotros-main::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+
+.nosotros-main::-webkit-scrollbar-track {
+
+    background: #080808;
+
+}
+
+
+.nosotros-main::-webkit-scrollbar-thumb {
+
+    background: #292929;
+
+    border-radius: 10px;
+
+}
+
+
+.nosotros-main::-webkit-scrollbar-thumb:hover {
+
+    background: #7c3aed;
+
+}
+
+
+/* ==================================================
+   HERO / PRESENTACIÓN
+================================================== */
+
+.nosotros-hero {
+
+    min-height: 620px;
+
+    max-width: 1300px;
+
+    margin: 0 auto 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+}
+
+
+.nosotros-hero-text {
+
+    max-width: 760px;
+
+}
+
+
+.nosotros-label {
+
+    color: #a855f7;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.nosotros-hero h1 {
+
+    font-size: clamp(
+        55px,
+        7vw,
+        95px
+    );
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.nosotros-hero h1 span {
+
+    display: block;
+
+    color: #a855f7;
+
+}
+
+
+.nosotros-intro {
+
+    max-width: 650px;
+
+    color: #888888;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ==================================================
+   ELEMENTO VISUAL
+================================================== */
+
+.nosotros-visual {
+
+    position: relative;
+
+    width: 420px;
+
+    height: 420px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.visual-circle {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(124, 58, 237, 0.25);
+
+    animation:
+        rotateCircle 20s linear infinite;
+
+}
+
+
+.visual-circle::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 65%;
+
+    height: 65%;
+
+    top: 17.5%;
+
+    left: 17.5%;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(168, 85, 247, 0.2);
+
+}
+
+
+.visual-circle::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 8px;
+
+    background: #a855f7;
+
+    border-radius: 50%;
+
+    top: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        0 0 20px
+        rgba(168, 85, 247, 0.8);
+
+}
+
+
+.visual-text {
+
+    position: relative;
+
+    color: #000000;
+
+    font-size: 75px;
+
+    font-weight: 600;
+
+    letter-spacing: -5px;
+
+    z-index: 2;
+
+}
+
+
+@keyframes rotateCircle {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+/* ==================================================
+   TÍTULOS GENERALES
+================================================== */
+
+.section-small-title {
+
+    color: #a855f7;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ==================================================
+   NUESTRA IDEA
+================================================== */
+
+.nosotros-idea {
+
+    max-width: 1200px;
+
+    margin: 0 auto 150px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.nosotros-idea.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.section-title p {
+
+    color: #a855f7;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: clamp(
+        38px,
+        5vw,
+        65px
+    );
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+}
+
+
+.section-title h2 span {
+
+    display: block;
+
+    color: #a855f7;
+
+}
+
+
+.idea-content {
+
+    padding-top: 35px;
+
+}
+
+
+.idea-content p {
+
+    color: #777777;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ==================================================
+   PROBLEMA
+================================================== */
+
+.nosotros-problema {
+
+    max-width: 1200px;
+
+    margin: 0 auto 150px;
+
+    padding: 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        100px 1fr;
+
+    gap: 50px;
+
+    background: #101010;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.07);
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.nosotros-problema.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.nosotros-problema:hover {
+
+    border-color:
+        rgba(124, 58, 237, 0.4);
+
+}
+
+
+.problema-number {
+
+    color: #7c3aed;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.problema-content {
+
+    max-width: 800px;
+
+}
+
+
+.problema-content h2 {
+
+    color: #ffffff;
+
+    font-size: clamp(
+        35px,
+        5vw,
+        60px
+    );
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.problema-content h2 span {
+
+    display: block;
+
+    color: #a855f7;
+
+}
+
+
+.problema-content p:not(
+    .section-small-title
+) {
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ==================================================
+   OBJETIVO
+================================================== */
+
+.objetivo-section {
+
+    max-width: 1200px;
+
+    margin: 0 auto 150px;
+
+}
+
+
+.objetivo-card {
+
+    position: relative;
+
+    padding: 80px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515,
+            #0d0d0d
+        );
+
+    border: 1px solid
+        rgba(124, 58, 237, 0.25);
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.objetivo-card.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.objetivo-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    right: -180px;
+
+    top: -180px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(124, 58, 237, 0.2);
+
+    pointer-events: none;
+
+}
+
+
+.objetivo-card:hover {
+
+    border-color:
+        rgba(168, 85, 247, 0.55);
+
+}
+
+
+.objetivo-number {
+
+    position: absolute;
+
+    top: 35px;
+
+    right: 40px;
+
+    color: #333333;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.objetivo-card h2 {
+
+    color: #ffffff;
+
+    max-width: 850px;
+
+    font-size: clamp(
+        40px,
+        6vw,
+        75px
+    );
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.objetivo-card h2 span {
+
+    display: block;
+
+    color: #a855f7;
+
+}
+
+
+.objetivo-card > p:last-child {
+
+    max-width: 750px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ==================================================
+   MISIÓN Y VISIÓN
+================================================== */
+
+.mision-vision {
+
+    max-width: 1200px;
+
+    margin: 0 auto 160px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+.mv-card {
+
+    position: relative;
+
+    min-height: 420px;
+
+    padding: 50px;
+
+    background: #101010;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.07);
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.mv-card.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.mv-card:nth-child(2) {
+
+    transition-delay: 0.15s;
+
+}
+
+
+.mv-card:hover {
+
+    background: #121212;
+
+    border-color:
+        rgba(124, 58, 237, 0.45);
+
+}
+
+
+.mv-number {
+
+    position: absolute;
+
+    top: 30px;
+
+    right: 35px;
+
+    color: #333333;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.mv-card h2 {
+    color: #ffffff;
+
+    max-width: 450px;
+
+    font-size: 38px;
+
+    line-height: 1.1;
+
+    font-weight: 500;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.mv-card h2 span {
+
+    display: block;
+
+    color: #a855f7;
+
+}
+
+
+.mv-card > p:last-child {
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ==================================================
+   EQUIPO
+================================================== */
+
+.equipo-section {
+
+    max-width: 1200px;
+
+    margin: 0 auto 150px;
+
+}
+
+
+.equipo-header {
+
+    max-width: 700px;
+
+    margin-bottom: 70px;
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.equipo-header.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.equipo-header h2 {
+
+    font-size: clamp(
+        40px,
+        5vw,
+        65px
+    );
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.equipo-header h2 span {
+
+    display: block;
+
+    color: #a855f7;
+
+}
+
+
+.equipo-header > p:last-child {
+
+    color: #777777;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==================================================
+   GRID DEL EQUIPO
+================================================== */
+
+.equipo-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+
+}
+
+
+/* ==================================================
+   TARJETAS PERSONAS
+================================================== */
+
+.persona-card {
+
+    position: relative;
+
+    min-height: 280px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    background: #101010;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.07);
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.persona-card.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.persona-card:nth-child(1) {
+
+    transition-delay: 0.05s;
+
+}
+
+
+.persona-card:nth-child(2) {
+
+    transition-delay: 0.1s;
+
+}
+
+
+.persona-card:nth-child(3) {
+
+    transition-delay: 0.15s;
+
+}
+
+
+.persona-card:nth-child(4) {
+
+    transition-delay: 0.2s;
+
+}
+
+
+.persona-card:nth-child(5) {
+
+    transition-delay: 0.25s;
+
+}
+
+
+.persona-card:hover {
+
+    background: #151515;
+
+    border-color:
+        rgba(251, 250, 253, 0.5);
+
+}
+
+
+.persona-number {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+
+    color: #333333;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.persona-inicial {
+
+    position: absolute;
+
+    top: 45px;
+
+    left: 30px;
+
+    color: #c084fc;
+
+    font-size: 100px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.persona-card:hover
+.persona-inicial {
+
+    color: rgba(
+        168,
+        85,
+        247,
+        0.3
+    );
+
+    transform:
+        translateY(-5px);
+
+}
+
+
+.persona-card h3 {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+
+    font-weight: 500;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+
+.persona-card h3 span {
+
+    display: block;
+
+    color: #777777;
+
+    font-weight: 400;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+
+.persona-card:hover h3 {
+
+    color: #a855f7;
+
+}
+
+
+.persona-card:hover
+h3 span {
+
+    color: #b8b8b8;
+
+}
+
+
+/* ==================================================
+   FRASE FINAL
+================================================== */
+
+.nosotros-final {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding:
+        100px 0 80px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.nosotros-final.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.final-line {
+
+    width: 35px;
+
+    height: 2px;
+
+    margin: 0 auto 35px;
+
+    background: #7c3aed;
+
+}
+
+
+.nosotros-final p {
+
+    color: #777777;
+
+    font-size: 23px;
+
+    line-height: 1.5;
+
+    margin-bottom: 10px;
+
+}
+
+
+.nosotros-final p span {
+
+    color: #000000;
+
+}
+
+
+.nosotros-final h2 {
+
+    color: #a855f7;
+
+    font-size: clamp(
+        40px,
+        6vw,
+        70px
+    );
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+
+    .nosotros-hero {
+
+        gap: 40px;
+
+    }
+
+
+    .nosotros-visual {
+
+        width: 300px;
+
+        height: 300px;
+
+    }
+
+
+    .visual-text {
+
+        font-size: 55px;
+
+    }
+
+
+    .equipo-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+/* ==================================================
+   TABLET PEQUEÑA
+================================================== */
+
+@media (max-width: 800px) {
+
+
+    .nosotros-hero {
+
+        min-height: auto;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-bottom: 100px;
+
+    }
+
+
+    .nosotros-visual {
+
+        align-self: center;
+
+        margin-top: 30px;
+
+    }
+
+
+    .nosotros-idea {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 20px;
+
+        margin-bottom: 100px;
+
+    }
+
+
+    .nosotros-problema {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 20px;
+
+        padding: 45px;
+
+    }
+
+
+    .mision-vision {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .mv-card {
+
+        min-height: auto;
+
+    }
+
+
+    .equipo-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 700px) {
+
+
+    .nosotros-main {
+
+        top: 70px;
+
+        bottom: 55px;
+
+        padding:
+            65px 7% 90px;
+
+    }
+
+
+    .nosotros-hero {
+
+        margin-bottom: 90px;
+
+    }
+
+
+    .nosotros-hero h1 {
+
+        font-size: 52px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .nosotros-intro {
+
+        font-size: 15px;
+
+    }
+
+
+    .nosotros-visual {
+
+        width: 270px;
+
+        height: 270px;
+
+    }
+
+
+    .visual-text {
+
+        font-size: 50px;
+
+    }
+
+
+    .nosotros-idea {
+
+        margin-bottom: 90px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    .nosotros-problema {
+
+        padding: 35px 30px;
+
+        margin-bottom: 90px;
+
+    }
+
+
+    .problema-content h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .objetivo-card {
+
+        padding: 50px 30px;
+
+    }
+
+
+    .objetivo-card h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    .mision-vision {
+
+        margin-bottom: 100px;
+
+    }
+
+
+    .mv-card {
+
+        padding: 40px 30px;
+
+    }
+
+
+    .mv-card h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .equipo-section {
+
+        margin-bottom: 100px;
+
+    }
+
+
+    .equipo-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .persona-card {
+
+        min-height: 250px;
+
+        padding: 25px;
+
+    }
+
+
+    .persona-inicial {
+
+        font-size: 80px;
+
+        top: 35px;
+
+        left: 25px;
+
+    }
+
+
+    .persona-card h3 {
+
+        font-size: 15px;
+
+    }
+
+
+    .nosotros-final {
+
+        padding-top: 70px;
+
+    }
+
+
+    .nosotros-final p {
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULARES PEQUEÑOS
+================================================== */
+
+@media (max-width: 400px) {
+
+
+    .nosotros-hero h1 {
+
+        font-size: 44px;
+
+    }
+
+
+    .nosotros-visual {
+
+        width: 230px;
+
+        height: 230px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .problema-content h2 {
+
+        font-size: 33px;
+
+    }
+
+
+    .objetivo-card h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .equipo-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .persona-card {
+
+        min-height: 220px;
+
+    }
+
+}

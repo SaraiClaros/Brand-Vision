@@ -1,0 +1,1162 @@
+
+/* ==================================================
+   BRAND VISION
+   CONTACTO
+================================================== */
+
+
+/* ==================================================
+   CONTENEDOR PRINCIPAL
+================================================== */
+
+.contacto-main {
+
+    position: absolute;
+
+    top: 76px;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 80px 8% 120px;
+
+    background: #ffffff;
+
+}
+
+
+/* ==================================================
+   SCROLL
+================================================== */
+
+.contacto-main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contacto-main::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.contacto-main::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 10px;
+}
+
+.contacto-main::-webkit-scrollbar-thumb:hover {
+    background: #7c3aed;
+}
+
+
+/* ==================================================
+   ENCABEZADO
+================================================== */
+
+.contacto-hero {
+
+    max-width: 1200px;
+
+    margin: 0 auto 90px;
+
+}
+
+
+.contacto-label {
+
+    color: #7c3aed;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.contacto-hero h1 {
+
+    max-width: 950px;
+
+    color: #151515;
+
+    font-size: clamp(
+        55px,
+        7vw,
+        90px
+    );
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.contacto-hero h1 span {
+
+    display: block;
+
+    color: #7c3aed;
+
+}
+
+
+.contacto-intro {
+
+    max-width: 650px;
+
+    color: #666666;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ==================================================
+   CONTENEDOR CONTACTO
+================================================== */
+
+.contacto-container {
+
+    max-width: 1200px;
+
+    margin: 0 auto 150px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: start;
+
+}
+
+
+/* ==================================================
+   CAJA DEL FORMULARIO
+================================================== */
+
+.contacto-form-wrapper {
+
+    padding: 55px;
+
+    background: #ffffff;
+
+    border: 2px solid #171717;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.contacto-form-wrapper.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.contacto-form-wrapper:hover {
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.18);
+
+}
+
+
+/* ==================================================
+   ENCABEZADO FORMULARIO
+================================================== */
+
+.form-header {
+
+    margin-bottom: 45px;
+
+}
+
+
+.form-header > p {
+
+    color: #7c3aed;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.form-header h2 {
+
+    max-width: 500px;
+
+    color: #151515;
+
+    font-size: clamp(
+        32px,
+        4vw,
+        48px
+    );
+
+    line-height: 1.1;
+
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.form-header h2 span {
+
+    color: #7c3aed;
+
+}
+
+
+/* ==================================================
+   GRUPOS
+================================================== */
+
+.form-group {
+
+    margin-bottom: 25px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #222222;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.form-group label span {
+
+    color: #888888;
+
+    font-size: 11px;
+
+    font-weight: 400;
+
+}
+
+
+/* ==================================================
+   CAMPOS
+================================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 15px 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #999999;
+
+    outline: none;
+
+    color: #222222;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+/* ==================================================
+   PLACEHOLDER
+================================================== */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #999999;
+
+}
+
+
+/* ==================================================
+   CAMPOS AL SELECCIONAR
+================================================== */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(124, 58, 237, 0.12);
+
+}
+
+
+/* ==================================================
+   SELECT
+================================================== */
+
+.form-group select {
+
+    cursor: pointer;
+
+    appearance: none;
+
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            #7c3aed 50%
+        ),
+        linear-gradient(
+            135deg,
+            #7c3aed 50%,
+            transparent 50%
+        );
+
+    background-position:
+        calc(100% - 18px) 20px,
+        calc(100% - 13px) 20px;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat: no-repeat;
+
+}
+
+
+.form-group select option {
+
+    background: #ffffff;
+
+    color: #222222;
+
+}
+
+
+/* ==================================================
+   TEXTAREA
+================================================== */
+
+.form-group textarea {
+
+    min-height: 140px;
+
+    resize: vertical;
+
+}
+
+
+/* ==================================================
+   BOTÓN
+================================================== */
+
+.contacto-submit {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 17px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border: none;
+
+    background: #7c3aed;
+
+    color: #ffffff;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.contacto-submit span {
+
+    font-size: 18px;
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+.contacto-submit:hover {
+
+    background: #6d28d9;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(124, 58, 237, 0.3);
+
+}
+
+
+.contacto-submit:hover span {
+
+    transform:
+        translate(3px, -3px);
+
+}
+
+
+/* ==================================================
+   MENSAJE DEL FORMULARIO
+================================================== */
+
+.form-message {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    margin-top: 0;
+
+    padding: 0;
+
+    color: #7c3aed;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    text-align: center;
+
+    transition:
+        max-height 0.4s ease,
+        margin 0.4s ease,
+        padding 0.4s ease;
+
+}
+
+
+.form-message.show {
+
+    max-height: 100px;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: 1px solid
+        rgba(124, 58, 237, 0.3);
+
+    background: #f5f0ff;
+
+}
+
+
+/* ==================================================
+   REDES SOCIALES
+================================================== */
+
+.contacto-social {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease 0.15s,
+        transform 0.8s ease 0.15s;
+
+}
+
+
+.contacto-social.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* ==================================================
+   ENCABEZADO REDES
+================================================== */
+
+.social-header {
+
+    margin-bottom: 35px;
+
+}
+
+
+.social-header > p {
+
+    color: #7c3aed;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.social-header h2 {
+
+    color: #151515;
+
+    font-size: 32px;
+
+    line-height: 1.15;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+
+}
+
+
+.social-header h2 span {
+
+    display: block;
+
+    color: #666666;
+
+}
+
+
+/* ==================================================
+   TARJETAS DE REDES
+================================================== */
+
+.social-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    width: 100%;
+
+    padding: 20px;
+
+    margin-bottom: 12px;
+
+    background: #ffffff;
+
+    border: 2px solid #171717;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform: translateX(30px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.social-card.visible {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+.social-card:hover {
+
+    background: #f5f0ff;
+
+    border-color: #7c3aed;
+
+    transform: translateX(5px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.12);
+
+}
+
+
+/* ==================================================
+   ICONOS
+   SIN BORDE NEGRO
+================================================== */
+
+.social-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    color: #7c3aed;
+
+    background: transparent;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.social-card:hover
+.social-icon {
+
+    background: #7c3aed;
+
+    color: #ffffff;
+
+    transform:
+        rotate(-5deg);
+
+}
+
+
+/* ==================================================
+   INFORMACIÓN SOCIAL
+================================================== */
+
+.social-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+
+}
+
+
+.social-name {
+
+    color: #151515;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+
+.social-description {
+
+    color: #777777;
+
+    font-size: 12px;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+
+.social-card:hover
+.social-name {
+
+    color: #7c3aed;
+
+}
+
+
+.social-card:hover
+.social-description {
+
+    color: #555555;
+
+}
+
+
+/* ==================================================
+   FLECHA
+================================================== */
+
+.social-arrow {
+
+    margin-left: auto;
+
+    color: #555555;
+
+    font-size: 17px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.social-card:hover
+.social-arrow {
+
+    color: #7c3aed;
+
+    transform:
+        translate(3px, -3px);
+
+}
+
+
+/* ==================================================
+   FRASE DE REDES
+================================================== */
+
+.social-quote {
+
+    margin-top: 40px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #dddddd;
+
+}
+
+
+.social-quote > span {
+
+    display: block;
+
+    width: 25px;
+
+    height: 2px;
+
+    margin-bottom: 20px;
+
+    background: #7c3aed;
+
+}
+
+
+.social-quote p {
+
+    max-width: 350px;
+
+    color: #666666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+.social-quote strong {
+
+    color: #151515;
+
+    font-weight: 600;
+
+}
+
+
+/* ==================================================
+   FRASE FINAL
+================================================== */
+
+.contacto-final {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding:
+        80px 0 100px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.contacto-final.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.contacto-final-line {
+
+    width: 35px;
+
+    height: 2px;
+
+    margin: 0 auto 30px;
+
+    background: #7c3aed;
+
+}
+
+
+.contacto-final p {
+
+    color: #666666;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+
+    margin-bottom: 10px;
+
+}
+
+
+.contacto-final p span {
+
+    color: #151515;
+
+}
+
+
+.contacto-final h2 {
+
+    color: #7c3aed;
+
+    font-size: clamp(
+        50px,
+        7vw,
+        85px
+    );
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    letter-spacing: -3px;
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 950px) {
+
+    .contacto-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 80px;
+
+    }
+
+
+    .contacto-social {
+
+        max-width: 700px;
+
+    }
+
+
+    .social-header h2 {
+
+        font-size: 38px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 700px) {
+
+    .contacto-main {
+
+        top: 70px;
+
+        bottom: 55px;
+
+        padding:
+            65px 7% 90px;
+
+    }
+
+
+    .contacto-hero {
+
+        margin-bottom: 70px;
+
+    }
+
+
+    .contacto-hero h1 {
+
+        font-size: 52px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .contacto-intro {
+
+        font-size: 15px;
+
+    }
+
+
+    .contacto-container {
+
+        margin-bottom: 100px;
+
+        gap: 65px;
+
+    }
+
+
+    .contacto-form-wrapper {
+
+        padding: 35px 25px;
+
+    }
+
+
+    .form-header {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .form-header h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .social-header h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .social-card {
+
+        padding: 17px;
+
+    }
+
+
+    .social-icon {
+
+        width: 44px;
+
+        height: 44px;
+
+    }
+
+
+    .contacto-final {
+
+        padding:
+            60px 0 80px;
+
+    }
+
+
+    .contacto-final p {
+
+        font-size: 19px;
+
+    }
+
+
+    .contacto-final h2 {
+
+        font-size: 55px;
+
+    }
+
+}
+
+
+/* ==================================================
+   CELULARES PEQUEÑOS
+================================================== */
+
+@media (max-width: 400px) {
+
+    .contacto-hero h1 {
+
+        font-size: 44px;
+
+    }
+
+
+    .contacto-form-wrapper {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .form-header h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .social-header h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .social-card {
+
+        gap: 12px;
+
+    }
+
+
+    .social-name {
+
+        font-size: 14px;
+
+    }
+
+
+    .social-description {
+
+        font-size: 11px;
+
+    }
+
+
+    .contacto-final h2 {
+
+        font-size: 48px;
+
+    }
+
+}
