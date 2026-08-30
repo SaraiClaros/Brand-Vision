@@ -24,13 +24,8 @@ body {
     color: #000000;
 
     line-height: 1.6;
-
     min-height: 100vh;
 
-    /*
-       Evita que aparezca un scroll general
-       en el body.
-    */
     overflow: hidden;
 }
 
@@ -40,7 +35,6 @@ body {
 ================================================== */
 
 .navbar {
-
     position: fixed;
 
     top: 0;
@@ -70,7 +64,7 @@ body {
 
 
 /* ==================================================
-   LOGO
+   LOGO DE LA NAVBAR
 ================================================== */
 
 .logo {
@@ -79,7 +73,6 @@ body {
 }
 
 .logo a {
-
     display: flex;
     align-items: center;
 
@@ -97,16 +90,12 @@ body {
 }
 
 .logo span {
-
     font-weight: 300;
-
     color: #d4d4d8;
 }
 
 .logo strong {
-
     font-weight: 600;
-
     color: #ffffff;
 }
 
@@ -116,19 +105,16 @@ body {
 ================================================== */
 
 .nav-links {
-
     display: flex;
     align-items: center;
 
     gap: 38px;
 
     margin-left: auto;
-
     margin-right: 45px;
 }
 
 .nav-links a {
-
     position: relative;
 
     padding: 27px 0;
@@ -154,7 +140,6 @@ body {
 /* Línea debajo del enlace */
 
 .nav-links a::after {
-
     content: "";
 
     position: absolute;
@@ -176,7 +161,6 @@ body {
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
-
     width: 22px;
 }
 
@@ -190,7 +174,6 @@ body {
 ================================================== */
 
 .nav-button {
-
     display: flex;
     align-items: center;
 
@@ -217,7 +200,6 @@ body {
 }
 
 .nav-button span {
-
     color: #a855f7;
 
     font-size: 15px;
@@ -226,14 +208,12 @@ body {
 }
 
 .nav-button:hover {
-
     background: #7c3aed;
 
     border-color: #7c3aed;
 }
 
 .nav-button:hover span {
-
     color: #ffffff;
 
     transform: translate(2px, -2px);
@@ -245,7 +225,6 @@ body {
 ================================================== */
 
 .menu-button {
-
     display: none;
 
     background: transparent;
@@ -265,34 +244,21 @@ body {
 ================================================== */
 
 main {
-
-    /*
-       El contenido ocupa toda la pantalla.
-       La navbar y el footer están por encima.
-    */
-
     position: absolute;
 
     top: 76px;
-
     bottom: 55px;
 
     left: 0;
-
     right: 0;
 
-    /*
-       SOLO el contenido tendrá scroll.
-    */
-
     overflow-y: auto;
-
     overflow-x: hidden;
 }
 
 
 /* ==================================================
-   BARRA DE SCROLL DEL CONTENIDO
+   BARRA DE SCROLL
 ================================================== */
 
 main::-webkit-scrollbar {
@@ -304,9 +270,7 @@ main::-webkit-scrollbar-track {
 }
 
 main::-webkit-scrollbar-thumb {
-
     background: #333333;
-
     border-radius: 10px;
 }
 
@@ -320,16 +284,17 @@ main::-webkit-scrollbar-thumb:hover {
 ================================================== */
 
 .home {
+    min-height: calc(100vh - 131px);
 
-    min-height: 100%;
-
-    padding: 100px 8%;
+    padding: 80px 8%;
 
     display: flex;
 
-    flex-direction: column;
+    align-items: center;
 
-    justify-content: center;
+    justify-content: space-between;
+
+    gap: 100px;
 
     position: relative;
 
@@ -342,13 +307,11 @@ main::-webkit-scrollbar-thumb:hover {
 ================================================== */
 
 .home::after {
-
     content: "";
 
     position: absolute;
 
     width: 500px;
-
     height: 500px;
 
     border-radius: 50%;
@@ -367,11 +330,27 @@ main::-webkit-scrollbar-thumb:hover {
 
 
 /* ==================================================
-   TEXTO DEL HOME
+   CONTENIDO DEL HOME
+================================================== */
+
+.home-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 55%;
+
+    max-width: 650px;
+
+    flex-shrink: 0;
+}
+
+
+/* ==================================================
+   ETIQUETA BRAND VISION
 ================================================== */
 
 .home-label {
-
     color: #a855f7;
 
     font-size: 12px;
@@ -384,11 +363,14 @@ main::-webkit-scrollbar-thumb:hover {
 }
 
 
+/* ==================================================
+   TÍTULO PRINCIPAL
+================================================== */
+
 .home h1 {
+    max-width: 650px;
 
-    max-width: 850px;
-
-    font-size: clamp(48px, 7vw, 90px);
+    font-size: clamp(48px, 6vw, 82px);
 
     line-height: 1.03;
 
@@ -399,18 +381,19 @@ main::-webkit-scrollbar-thumb:hover {
     margin-bottom: 30px;
 }
 
-
 .home h1 span {
-
     display: block;
 
     color: #3B176D;
 }
 
 
-.home-description {
+/* ==================================================
+   DESCRIPCIÓN
+================================================== */
 
-    max-width: 600px;
+.home-description {
+    max-width: 560px;
 
     color: #3B176D;
 
@@ -427,7 +410,6 @@ main::-webkit-scrollbar-thumb:hover {
 ================================================== */
 
 .home-button {
-
     width: fit-content;
 
     display: flex;
@@ -453,17 +435,859 @@ main::-webkit-scrollbar-thumb:hover {
         transform 0.25s ease;
 }
 
-
 .home-button span {
     font-size: 17px;
 }
 
-
 .home-button:hover {
-
     background: #6d28d9;
 
     transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   LOGO GRANDE DEL HOME
+================================================== */
+
+.home-logo {
+    width: 42%;
+    max-width: 580px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.home-logo img {
+    width: 100%;
+    max-width: 580px;
+    height: auto;
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 25px 45px
+            rgba(124, 58, 237, 0.15)
+        );
+
+    animation: logoFloat 5s ease-in-out infinite;
+}
+
+/* ==================================================
+   ANIMACIÓN DEL LOGO
+================================================== */
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* ==================================================
+   LABEL GENERAL
+================================================== */
+
+.section-label {
+    color: #7c3aed;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==================================================
+   EVOLUCIÓN
+================================================== */
+
+.evolucion-section {
+    padding: 150px 8%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.evolucion-section.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.evolucion-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+.evolucion-title h2 {
+    color: #151515;
+
+    font-size:
+        clamp(45px, 6vw, 75px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    font-weight: 600;
+}
+
+.evolucion-title h2 span {
+    display: block;
+
+    color: #7c3aed;
+}
+
+.evolucion-text {
+    padding-top: 10px;
+}
+
+.evolucion-text p {
+    color: #666666;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==================================================
+   ANTES / DESPUÉS
+================================================== */
+
+.antes-despues-section {
+    padding: 120px 8% 150px;
+
+    background: #f6f6f8;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.antes-despues-section.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.antes-despues-grid {
+    max-width: 1200px;
+
+    margin: 70px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 100px 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* ==================================================
+   TARJETAS
+================================================== */
+
+.transform-card {
+    position: relative;
+
+    padding: 45px;
+
+    background: #ffffff;
+
+    border: 2px solid #171717;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.transform-card.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.transform-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    left: var(--mouse-x);
+
+    top: var(--mouse-y);
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124,58,237,0.12),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+.transform-card:hover {
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.12);
+}
+
+
+/* ==================================================
+   NUMERO
+================================================== */
+
+.transform-number {
+    color: #888888;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==================================================
+   ICONO
+================================================== */
+
+.transform-icon {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    color: #7c3aed;
+
+    font-size: 25px;
+}
+
+
+/* ==================================================
+   TITULO
+================================================== */
+
+.transform-card h3 {
+    color: #151515;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.transform-card p {
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==================================================
+   LISTA
+================================================== */
+
+.transform-card ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.transform-card li {
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding: 9px 0;
+
+    color: #555555;
+
+    font-size: 13px;
+
+    border-top:
+        1px solid #eeeeee;
+}
+
+.transform-card li span {
+    color: #7c3aed;
+
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   TARJETA INTERACTIVA
+================================================== */
+
+.transform-card.interactivo {
+    background: #151515;
+
+    border-color: #151515;
+}
+
+.transform-card.interactivo h3 {
+    color: #ffffff;
+}
+
+.transform-card.interactivo p {
+    color: #aaaaaa;
+}
+
+.transform-card.interactivo li {
+    color: #cccccc;
+
+    border-color:
+        rgba(255,255,255,0.1);
+}
+
+.transform-card.interactivo .transform-number {
+    color: #999999;
+}
+
+
+/* ==================================================
+   FLECHA
+================================================== */
+
+.transform-arrow {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.transform-arrow span {
+    color: #7c3aed;
+
+    font-size: 55px;
+
+    font-weight: 200;
+}
+
+
+/* ==================================================
+   MERCADO
+================================================== */
+
+.mercado-section {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 150px 8%;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.mercado-section.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.mercado-header {
+    margin-bottom: 80px;
+}
+
+.mercado-header h2 {
+    color: #151515;
+
+    font-size:
+        clamp(45px, 6vw, 75px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.mercado-header h2 span {
+    color: #7c3aed;
+
+    display: block;
+}
+
+.mercado-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+}
+
+.mercado-text p {
+    color: #666666;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+.mercado-text .mercado-highlight {
+    color: #151515;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+
+    font-weight: 500;
+}
+
+
+/* ==================================================
+   SECTORES
+================================================== */
+
+.sectores {
+    border-top:
+        1px solid #dddddd;
+}
+
+.sector {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 18px 0;
+
+    color: #222222;
+
+    font-size: 15px;
+
+    border-bottom:
+        1px solid #dddddd;
+
+    opacity: 0;
+
+    transform: translateX(30px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.sector.visible {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+.sector span {
+    color: #7c3aed;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+.sector:hover {
+    color: #7c3aed;
+
+    padding-left: 10px;
+}
+
+
+/* ==================================================
+   COMPLEMENTO
+================================================== */
+
+.complemento-section {
+    padding: 100px 8%;
+
+    background: #f6f6f8;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.complemento-section.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.complemento-box {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 100px;
+}
+
+.complemento-left h2 {
+    color: #151515;
+
+    font-size:
+        clamp(45px, 6vw, 70px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.complemento-left h2 span {
+    display: block;
+
+    color: #7c3aed;
+}
+
+.complemento-right {
+    padding-top: 30px;
+}
+
+.complemento-big {
+    color: #151515 !important;
+
+    font-size: 30px !important;
+
+    line-height: 1.2 !important;
+
+    margin-bottom: 35px !important;
+}
+
+.complemento-right p {
+    color: #666666;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==================================================
+   PROCESO
+================================================== */
+
+.proceso-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 150px 8%;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.proceso-section.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.proceso-header {
+    margin-bottom: 75px;
+}
+
+.proceso-header h2 {
+    color: #151515;
+
+    font-size:
+        clamp(45px, 6vw, 75px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.proceso-header h2 span {
+    display: block;
+
+    color: #7c3aed;
+}
+
+.proceso-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.proceso-card {
+    position: relative;
+
+    padding: 40px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.proceso-card.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.proceso-card:hover {
+    border-color: #7c3aed;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.08);
+}
+
+.proceso-num {
+    color: #7c3aed;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.proceso-icon {
+    margin:
+        40px 0 25px;
+
+    color: #7c3aed;
+
+    font-size: 30px;
+}
+
+.proceso-card h3 {
+    color: #151515;
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.proceso-card p {
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   IDEA FINAL
+================================================== */
+
+.idea-section {
+    padding: 160px 8% 180px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.idea-section.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.idea-line {
+    width: 35px;
+
+    height: 2px;
+
+    margin:
+        0 auto 30px;
+
+    background: #7c3aed;
+}
+
+.idea-small {
+    color: #7c3aed;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 35px;
+}
+
+.idea-section h2 {
+    color: #151515;
+
+    font-size:
+        clamp(45px, 7vw, 85px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    font-weight: 600;
+}
+
+.idea-section h2 span {
+    color: #7c3aed;
+}
+
+.idea-section h3 {
+    color: #777777;
+
+    font-size:
+        clamp(35px, 5vw, 65px);
+
+    line-height: 1.1;
+
+    font-weight: 400;
+
+    margin-bottom: 55px;
+
+    letter-spacing: -2px;
+}
+
+.idea-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 25px;
+
+    background: #7c3aed;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.idea-button span {
+    font-size: 18px;
+}
+
+.idea-button:hover {
+    background: #6d28d9;
+
+    transform:
+        translateY(-3px);
 }
 
 
@@ -472,7 +1296,6 @@ main::-webkit-scrollbar-thumb:hover {
 ================================================== */
 
 .footer {
-
     position: fixed;
 
     bottom: 0;
@@ -497,9 +1320,7 @@ main::-webkit-scrollbar-thumb:hover {
     z-index: 1000;
 }
 
-
 .footer p {
-
     margin: 0;
 
     color: #f1ebeb;
@@ -526,22 +1347,58 @@ main::-webkit-scrollbar-thumb:hover {
 @media (max-width: 900px) {
 
     .navbar {
-
         padding: 0 5%;
     }
 
     .nav-links {
-
         gap: 22px;
 
         margin-right: 25px;
     }
 
     .home {
+        padding:
+            70px 6%;
 
-        padding-left: 6%;
+        gap: 50px;
+    }
 
-        padding-right: 6%;
+    .home-content {
+        width: 58%;
+    }
+
+    .home-logo {
+        width: 36%;
+    }
+
+    .evolucion-content,
+    .mercado-grid,
+    .complemento-box {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 50px;
+    }
+
+    .antes-despues-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 25px;
+    }
+
+    .transform-arrow {
+
+        transform:
+            rotate(90deg);
+    }
+
+    .proceso-grid {
+
+        grid-template-columns:
+            1fr;
     }
 }
 
@@ -555,22 +1412,17 @@ main::-webkit-scrollbar-thumb:hover {
     /* NAVBAR */
 
     .navbar {
-
         height: 70px;
 
         padding: 0 5%;
     }
 
-
     .nav-links,
     .nav-button {
-
         display: none;
     }
 
-
     .menu-button {
-
         display: block;
     }
 
@@ -578,7 +1430,6 @@ main::-webkit-scrollbar-thumb:hover {
     /* CONTENIDO */
 
     main {
-
         top: 70px;
 
         bottom: 55px;
@@ -588,31 +1439,51 @@ main::-webkit-scrollbar-thumb:hover {
     /* HOME */
 
     .home {
+        min-height:
+            calc(100vh - 125px);
 
-        min-height: 100%;
+        padding:
+            70px 7%;
 
-        padding: 70px 7%;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 40px;
     }
 
+    .home-content {
+        width: 100%;
+
+        max-width: 100%;
+    }
 
     .home h1 {
-
         font-size: 48px;
 
         letter-spacing: -1px;
     }
 
-
     .home-description {
-
         font-size: 15px;
+    }
+
+    .home-logo {
+        width: 70%;
+
+        max-width: 300px;
+
+        align-self: center;
+
+        margin-left: 0;
     }
 
 
     /* CÍRCULO */
 
     .home::after {
-
         width: 300px;
 
         height: 300px;
@@ -621,19 +1492,58 @@ main::-webkit-scrollbar-thumb:hover {
     }
 
 
-    /* FOOTER */
+    /* SECCIONES */
 
-    .footer {
-
-        height: 55px;
+    .evolucion-section,
+    .mercado-section,
+    .proceso-section {
+        padding:
+            100px 7%;
     }
 
+    .antes-despues-section {
+        padding:
+            90px 7% 110px;
+    }
 
-    .footer p {
+    .complemento-section {
+        padding:
+            80px 7%;
+    }
 
-        font-size: 10px;
+    .idea-section {
+        padding:
+            110px 7% 130px;
+    }
 
-        padding: 0 15px;
+    .evolucion-title h2,
+    .mercado-header h2,
+    .complemento-left h2,
+    .proceso-header h2 {
+
+        letter-spacing: -2px;
+    }
+
+    .transform-card {
+        padding:
+            30px 25px;
+    }
+
+    .transform-arrow span {
+        font-size: 45px;
+    }
+
+    .mercado-text
+    .mercado-highlight {
+        font-size: 19px;
+    }
+
+    .complemento-big {
+        font-size: 25px !important;
+    }
+
+    .idea-section h2 {
+        letter-spacing: -2px;
     }
 }
 
@@ -645,51 +1555,32 @@ main::-webkit-scrollbar-thumb:hover {
 @media (max-width: 400px) {
 
     .logo a {
-
         font-size: 16px;
     }
 
+    .home {
+        padding:
+            60px 6%;
+    }
 
     .home h1 {
-
         font-size: 40px;
     }
 
-
     .home-description {
+        font-size: 14px;
+    }
 
+    .home-logo {
+        width: 80%;
+    }
+
+    .transform-card {
+        padding:
+            25px 20px;
+    }
+
+    .sector {
         font-size: 14px;
     }
 }
-
-/* ==================================================
-   LOGO GRANDE DEL HOME
-================================================== */
-
-.home-logo {
-    position: absolute;
-
-    right: 8%;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 420px;
-    height: 420px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 1;
-}
-
-.home-logo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    display: block;
-}
-
